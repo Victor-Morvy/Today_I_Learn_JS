@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Aula 04 - JS</title>
+</head>
+<body>
+	<script type="text/javascript">
+		
+		var nome = 'Victor';
+		var sobrenome = 'Oliveira';
+		var idade = 26;
+
+		//var pessoa = ['Victor', 'Oliveira', 26];
+
+		//console.log(pessoa[1]);
+
+		var frutas = ['laranja', 'abacate', 'melancia', 'abacaxi'];
+
+		//objeto pessoa
+		var pessoa = {
+			nome: 'Victor',
+			sobrenome: 'Oliveira',
+			idade: 26,
+			andar: function(){
+				alert('caminhando');
+			}
+		};
+
+		//duas maneiras de acessar
+		/*
+		console.log(pessoa['idade']);
+		console.log(pessoa.nome);
+		console.log(pessoa.andar());
+		*/
+
+		//frutas[3] = 'pitanga'; //não é forma ideal
+		frutas.push('pitanga');//metodo ideal, adiciona um elemento no final da array
+		console.log(frutas.length);
+
+		console.log(frutas.toString()); //transforma o array em string
+
+		console.log(frutas.join(" - ")); //.join separa a lista
+
+		frutas.pop(); //remove o último elemento do array
+		console.log(frutas.toString());
+
+		frutas.shift(); //remove o primeiro elemento do array
+		console.log(frutas.toString());
+
+		frutas.unshift('pitanga'); //adiciona um elemento na primeira casa do array
+		console.log(frutas.toString());
+
+		frutas.reverse(); //inverte a ordem no momento do array
+		console.log(frutas.toString());
+
+		frutas.sort(); //deixa o array em ordem alfabética
+		console.log(frutas.toString());
+		
+
+	</script>
+	
+</body>
+</html>

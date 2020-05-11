@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Aula 03 - JS</title>
+</head>
+<body>
+
+
+	
+	<script type="text/javascript">
+
+	var num_calc = 3;
+
+	function alerta(a, b){
+		c = a + b;
+		alert(c);
+	}
+	//alerta(3, 5);
+
+	function metade(num){
+		return num / 2;
+	}
+	//alert('A metade de ' + num_calc + ' é ' + metade(num_calc));
+
+	function soma(a, b){
+		total = a + b; //por estar declarada, vira global
+	}
+	
+	soma(4, 5);
+	alert(total);
+
+	</script> 
+	 
+
+</body>
+</html>

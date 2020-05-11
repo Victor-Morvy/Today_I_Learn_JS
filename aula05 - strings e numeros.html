@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Aula 05 - JS</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		var txt = 'Esse é um texto qualquer, caixa d\'água';
+		txt = "Caixa d'água, \"fogo\" Barra d'água invertida:\\";
+		console.log(txt);
+
+		console.log(txt.length);
+
+		console.log(txt.indexOf('d\'água'));//pega o primeiro de uma string
+
+		console.log(txt.lastIndexOf('d\'água'))//pega o último de uma string
+
+		console.log(txt.search('d\'água'));//procura até achar 
+
+		console.log(txt.slice(6, 12));//corta texto
+
+		console.log(txt.substring(6, 12));//corta texto também
+
+		console.log(txt.substr(15, 4));//parâmetro 0 - a partidr de qual string, parâmetro 1 - tamanho que deseja cortar
+
+		console.log(txt.substr(15));//se omite o segundo parâmetro ele pega a partir do caractere até o final do string
+
+		console.log(txt.replace('d\'água', 'PQP')); //substituir ocorrencias dentro de uma string
+
+		console.log(txt.toUpperCase(txt));
+
+		console.log(txt.toLowerCase(txt));
+		
+		//////////////////////////// NUMEROS
+
+		var numero = 30.75 + 5;
+		numero -= 5;
+		numero += 2 ** 2;
+		numero = Math.pow(9, 2); //eleva o número
+		numero = Math.sqrt(9); //raiz quadrada
+		numero = Math.pow(9, 1/2); //elevar por 1/2 é raiz quadrada
+
+		console.log(numero);
+
+		numero = 9.5697;
+		console.log(numero.toFixed(2)); //mostra apenas 2 casas decimais
+
+		numero = 231.61232;
+		console.log(numero.toPrecision(2)); //retorna quantidade de digitos de um número
+
+
+
+	</script>
+
+</body>
+</html>

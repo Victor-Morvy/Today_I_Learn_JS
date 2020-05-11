@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Aula 06 - Data e Hora</title>
+</head>
+<body>
+	<script type="text/javascript">
+		
+		var dString = 'Mon Jan 01 1970 00:00:00 GMT-0300 (Horário Padrão de Brasília)';
+
+		var d = new Date();
+		//var d = new Date(85600000);//dia 1 de Janeiro de 1970, por padrão o sistema parte dessa data
+		//var d = new Date(dString);
+
+		console.log(d);
+		console.log(d.toUTCString());
+		console.log(d.toDateString());
+
+		console.log('getDate ' + d.getDate()); //retrona dia
+		console.log('getDay ' + d.getDay()); //retorna dia da semana 0-domingo 6-sábado
+		console.log('getFullYear ' + d.getFullYear()); //retorna data em 4 digitos
+		console.log('getHours ' + d.getHours()); //retorna a hora
+		console.log('getMilliseconds ' + d.getMilliseconds())//retorna milisegundos
+		console.log('getMinutes '+ d.getMinutes()); //retorna minutos
+		console.log('getMonth ' + d.getMonth()); //retorna o mês 0-Jeneiro
+		console.log('getSeconds' + d.getSeconds()); //retorna segundos
+		console.log('getTime ' + d.getTime()); //quantidade de milisegundos iniciada em 1 jan 1970
+
+		d.setDate(17);
+		console.log(d);
+
+		function formataData(data = new Date()){
+			var dia = data.getDate();
+			var mes = data.getMonth()+1;
+			var ano = data.getFullYear();
+
+			if(dia.toString().length == 1) dia = '0' + dia;
+
+			if(mes.toString().length == 1) mes = '0' + mes;
+
+			return dia + '/' + mes + '/' + ano;
+
+		}
+
+		console.log(formataData());
+
+
+	</script>
+</body>
+</html>
