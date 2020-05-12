@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Aula 10 - BOM</title>
+</head>
+<body> 
+	<div id="msg"></div>
+	
+	<script type="text/javascript">
+		//documento está dentro do window
+		console.log(document);
+		console.log(window);
+
+		////////////////////////////
+		//////////SALVA A URL QUE O USUARIO ESTÁ PARA MANDAR PRA OUTRA PÁGINA E VOLTAR PRA AÇÃO **dica**
+		console.log(window.location.href);
+
+		//window.history.back();//volta no histórico
+		//window.history.foward();//avança no histórico
+
+
+		//window.localStorage.setItem('nome', 'Ricardo'); //Salva no chache do navegador
+		window.sessionStorage.setItem('nome2', 'Pedro'); //Salva até fechar o navegador
+		
+		//document.getElementById('msg').innerHTML = window.localStorage.getItem("nome");
+
+		document.getElementById('msg').innerHTML = window.sessionStorage.getItem("nome2");
+	</script>
+</body>
+</html>

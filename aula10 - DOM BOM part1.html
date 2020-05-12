@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Aula 10 - DOM BOM</title>
+	<style type="text/css">
+		.zebrada{background: silver;}
+	</style>
+</head>
+<body>
+
+	<table class="zebra">
+		<thead>
+			<tr>
+				<th>Nome</th>
+				<th>Fone</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Ricardo</td>
+				<td>0xx00 00000-0000</td>
+			</tr>
+			<tr>
+				<td>Victor</td>
+				<td>0xx00 00000-0000</td>
+			</tr>
+			<tr>
+				<td>Eduardo</td>
+				<td>0xx00 00000-0000</td>
+			</tr>
+			<tr>
+				<td>João</td>
+				<td>0xx00 00000-0000</td>
+			</tr>
+			<tr>
+				<td>Maria</td>
+				<td>0xx00 00000-0000</td>
+			</tr>
+		</tbody>
+
+	</table>
+	
+	<script type="text/javascript">
+		window.onload = function(){
+			var zebrar = document.querySelectorAll('.zebra tbody tr'); //selecionando as tr
+			for(var i = 0; i < zebrar.length; i+=2){
+				zebrar[i].className = 'zebrada';
+			}
+		}
+	</script>
+</body>
+</html>

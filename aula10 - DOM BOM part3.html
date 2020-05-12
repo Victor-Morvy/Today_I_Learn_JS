@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Aula 10 - DOM BOM</title>
+</head>
+<body>
+	<div id="msg"></div>
+
+
+
+	<script type="text/javascript">
+		var janela = window.open('http://rbtech.info','nome','width=500, height=400'); //Os navegadores bloqueiam a função de popup hoje em dia
+
+		janela.document.write('Isso é um texto pro popup');
+
+		janela.opener.document.write("Isso é um testo aleatorio 2");
+	</script>
+	
+</body>
+</html>

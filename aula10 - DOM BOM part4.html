@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Aula 10 - DOM BOM</title>
+</head>
+<body>
+	<div id="msg"></div>
+
+	<input type="button" value="Cancelar timeout" onclick="clearTimeout(variavel)" name="">
+
+	<input type="button" value="Cancelar interval" onclick="clearInterval(msgInterval)" name="">
+
+	<script type="text/javascript">
+		//setTimeout(function(){console.log('Msg via timeout')}, 2000);//será executada uma única vez depois de um determinado tempo, 2000 milisegundos
+
+		var variavel = setTimeout(msgtimeout, 2000);
+
+		function msgtimeout(){
+			console.log("Mensagem de timeout");
+		}
+
+		////////////////////////////////////////////
+		//setInterval(msginverval, 1000);
+		var msgInterval = setInterval(msginterval, 1000);
+
+		function msginterval(){
+			console.log("Mensagem de interval");
+		}
+		///pode ser usado para mostrar um aviso ao usuário depois de um tempo na página
+
+		/////checar se o usuário está na página ou fora da página///////////////////////////////////////
+
+		function msgContador(){
+			console.log("Já se passaram 10 segundos dentro da página");
+		}
+
+		var intervalo = setInterval(verificaFoco, 1000);
+		var contador = 0;
+		function verificaFoco(){
+			if(document.hasFocus()){
+				contador++;
+				console.log(contador);
+				if(contador >= 10){
+					msgContador();
+					clearInterval(intervalo); //para parar o script de checar foco
+				}
+			}
+		}
+
+	</script>
+	
+</body>
+</html>
