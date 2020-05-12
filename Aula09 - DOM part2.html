@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Aula 09 - DOM - part 2</title>
+</head>
+<body onload="funcaoPaginaCarregada()">
+	
+	<img id="imagem" src="imagem.jpg" alt="texto de exemplo">
+
+	<p id="demo">Isso é um teste</p>
+
+	<!--<h1 onclick="this.innerHTML = 'obrigado!'">Clique aqui</h1> -->
+	<h1 onclick="funcao(this)">Clique aqui!!</h1>
+
+	<h1 id="trocaTexto">Clique aqui 3</h1>
+
+
+	<script type="text/javascript">
+		//document.write("Isso é um teste"); //escreve dentro do documento
+
+		//document.getElementById("imagem").src = "foto.jpg";
+		//document.getElementById("imagem").alt = "texto 2";
+
+		//document.getElementById('demo').style.color = "red";//javascript style reference
+
+		function funcao(elemento){
+			elemento.innerHTML = "Obligado!!!!"
+		}
+
+		function outraFuncao(){
+			document.getElementById("trocaTexto").innerHTML = "Obligado3!!!!"
+		}
+
+		document.getElementById("trocaTexto").onclick = outraFuncao;
+
+		function funcaoPaginaCarregada(){
+			alert('A página foi carregada!');
+		}
+
+	</script>
+	
+	
+
+</body>
+</html>

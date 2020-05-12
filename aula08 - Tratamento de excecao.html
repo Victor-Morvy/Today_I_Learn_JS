@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Aula 08 - Tratamento de excecao</title>
+</head>
+<body>
+
+	<p>Informe um número entre 10 e 20:</p>
+	<input type="text" id="numero">
+	<button onclick="verifica()">Verificar</button>
+	<p id="msg"></p>
+	
+	<script type="text/javascript">
+		function verifica(){
+			var x = document.getElementById("numero").value;
+
+			try{ //testa erros
+				if (x == '') throw 'Informe um valor';
+				if (isNaN(x)) throw 'Você precisa informar um número';
+				x = Number(x);//transforma em número
+				if (x < 10 || x > 20) throw 'Informe um número entre 10 e 20';
+
+				document.getElementById('msg').innerHTML = 'Funcionou! Você digitou o número: ' + x;
+			} catch(erro){ //retora msg de erro
+				document.getElementById('msg').innerHTML = 'Erro: '+erro;
+			} finally{ //não obrigatório e executa de qualquer forma, estando com erro ou não
+				document.getElementById("numero").value = "";//limpa valor input text
+			}
+
+		}
+
+
+
+		/*
+		try{
+			aalert("Teste");
+		} catch(erro){
+			alert('Erro: '+erro);
+		}
+		-------------------------------
+
+		var x = 5;
+
+		try{
+			if(x < 10) throw 'O valor de x precisa ser maior que 10';
+			alert("Teste");
+		} catch(erro){
+			alert('Erro: '+erro);
+		}
+		*/
+
+
+
+	</script>
+	
+</body>
+</html>

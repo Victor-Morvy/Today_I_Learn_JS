@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Aula 09 - DOM - part 3</title>
+</head>
+<body>
+	<select name="" id="demo" onchange="funcao()">
+		<option value="opcao1">Opção 1</option>
+		<option value="opcao2">Opção 2</option>
+		<option value="opcao3">Opção 3</option>
+	</select>
+
+	<h1 id="demo3" onmouseover="funcao3(this)" onmouseout="funcao4(this)">Passe o mouse aqui!</h1>
+
+	<input type="text" id="demo2" name="texto" onchange="funcao2()"> <!-- O alert só ativará quando você tirar o foco dele -->
+
+	<script type="text/javascript">
+		function funcao(){
+			alert('Opção alterada!');
+		}
+
+		function funcao2(){
+			alert('Desfocou do texto!');
+		}
+
+		function funcao3(elemento){
+			elemento.innerHTML = "Ok, mouse sobre o elemento";
+		}
+
+		function funcao4(elemento){
+			elemento.innerHTML = "Passe o mouse aqui!";
+		}
+
+		/* OUTROS EVENTOS -----------------------------------
+		onclick / onload / onchange / onmouseover / onmouseout
+		onfocus (em elementos de formulário) / onmousedown / onmouseup
+		*/
+
+	</script>
+	
+</body>
+</html>

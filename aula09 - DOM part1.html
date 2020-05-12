@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Aula 09 - DOM</title>
+</head>
+<body>
+	<p id="demo"></p>
+	<p class="exemplo"></p>
+	<p class="exemplo"></p>
+	<p class="exemplo"></p>
+	<a href="tesss.html">Test</a>
+	<div class='exemplo'></div>
+	<script type="text/javascript"> 
+		/*
+		document.getElementById('demo').innerHTML = "Texto de teste"; //só é possível ter um id em uma página web
+
+		console.log(document.getElementsByTagName('p')); //busca todas as tags que tem p e retorna array
+
+		console.log(document.getElementsByClassName("exemplo")); //busca elementos por class e retorna array
+
+		var x = document.getElementsByClassName('exemplo');
+		
+		x[0].innerHTML = 'texto 0';
+		x[1].innerHTML = 'texto 1';
+		x[2].innerHTML = 'texto 2';
+		*/
+		
+		//SEGUNDA PARTE//////////////////////////////
+		/*
+		var x = document.querySelectorAll('p.exemplo');
+		var x = document.querySelectorAll('div.exemplo');
+		*/
+
+		let x = 
+		[
+		'baseURI: '+document.baseURI,
+		'body: '+document.body,
+		'doctype: '+document.doctype,
+		'documentURI: '+document.documentURI,
+		'domain: '+document.domain,
+		'head: '+document.head,
+		'inputEncoding: ' + document.inputEncoding,
+		'lastModified: ' + document.lastModified,
+		'title: ' + document.title,
+		'URL: ' + document.URL,
+		'forms: ' + document.forms,
+		'links: ' + document.links,
+		'images: ' + document.images,
+		'scripts: ' + document.scripts
+		];
+
+		for(i = 0; i < x.length; i++){
+			console.log(x[i]);
+		}
+		
+
+	</script>
+	
+</body>
+</html>
